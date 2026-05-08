@@ -1,310 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <title>HiDBench</title>
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="icon" type="image/png" href="static/images/fig_icon.png">
 
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
+
+<style>
+  .expandable-card .card-text-container {
+    max-height: 200px;
+    overflow-y: hidden;
+    position: relative;
+  }
+
+  .expandable-card.expanded .card-text-container {
+    max-height: none;
+  }
+
+  .expand-btn {
+    position: relative;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #510c75;
+    border-color: transparent;
+  }
+
+  .expand-btn:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+    text-decoration: none;
+    border-color: transparent;
+    color: #510c75;
+  }
+
+  .expand-btn:focus {
+    outline: none;
+    text-decoration: none;
+  }
+
+  .expandable-card:not(.expanded) .card-text-container:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1));
+  }
+
+  .expandable-card:not(.expanded) .expand-btn {
+    margin-top: -40px;
+  }
+
+  .card-body {
+    padding-bottom: 5px;
+  }
+
+  .vertical-flex-layout {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .figure-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .adjustable-font-size {
+    font-size: calc(0.5rem + 2vw);
+  }
+
+  .chat-history {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  #gradio pre {
+    background-color: transparent;
+  }
+
+    .highlight-box {
+    background-color: #e6f1f8;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .highlight-box b {
+    font-weight: bold;
+  }
+
+  .finding-box {
+        background-color: #f8f9fa;
+        border-radius: 20px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      }
+  
+      .finding-content {
+        margin: 0;
+      }
+  
+      .number {
+        font-weight: bold;
+        color: #2c3e50;
+      }
+  
+      .arrow {
+        color: #7f8c8d;
+        margin: 0 0.5rem;
+        font-weight: bold;
+      }
+  
+      .conclusion {
+        color: #2980b9;
+        font-weight: bold;
+      }
+  
+      .text-center {
+        text-align: center;
+      }
+
+      .list1 {
+      list-style-type: circle;
+      }
+
+      .list2 {
+      list-style-type: square;
+      margin-left: 2em;
+      }
+</style>
+  
 <body>
 
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <main id="main-content">
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <div style="display: flex; align-items: center; justify-content: center;">
+              <img src="static/images/fig_icon.png" style="height: 60px; margin-right: 10px; margin-top: -10px;">
+              <h1 class="title is-1 publication-title">HiDBench</h1>
+            </div>
+            <h3><b>
+              A Hierarchical Dual-views Future Anticipation Benchmark for MLLMs
+            </b></h3>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
+              <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous Author(s)</a><sup>*</sup>,</span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">NeurIPS 2026</span>
                   </div>
-
+ 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+                         
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
+                    
+                      
+                  <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/hidbench/code" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <img src="static/images/github.png" style="width: 20px; height: 20px;">
                     </span>
                     <span>Code</span>
                   </a>
                 </span>
+                
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                <!-- Datasets link -->
+                  <span class="link-block">
+                    <a href="https://github.com/hidbench/page" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="static/images/Datasets.png" style="width: 20px; height: 20px;">
+                    </span>
+                    <span>Datasets</span>
+                  </a>
+                </span>
+                
             </div>
           </div>
         </div>
@@ -314,34 +233,17 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+
 
 <!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
+ <section class="section" style="background-color:#efeff081">
+   <div class="container is-max-desktop">
+     <div class="columns is-centered has-text-centered">
+       <div class="column is-six-fifths">
+         <h2 class="title is-3">Abstract</h2>
+         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Future anticipation, as a foundational capability of intelligent perception, empowers autonomous decision-making and human intent inference. Such predictive reasoning relies on sufficient visual observations, yet single-view perception is inherently vulnerable to pervasive perspective occlusions in real-world scenarios. By contrast, dual-view observations provide a more comprehensive scene understanding through visual complementation. After eliminating view biases, the inherent complexity of interactive scenarios remains non-trivial, which further demands fine-grained hierarchical modeling of human activities. To explore how dual-view observation and hierarchical prediction granularity facilitate future anticipation, we propose HiDBench, a multi-level benchmark that aligns exocentric and egocentric data. Curated via a VLM-and-human-in-the-loop pipeline, HiDBench provides 9,000+ aligned ego-exo video pairs and defines 9 hierarchical tasks across three levels, i.e., relation, action, and video. Extensive benchmarking of 13 state-of-the-art MLLMs reveals that dual-view input enhances performance by addressing view-specific occlusions, while also challenging the reasoning ability with complex scenes. Evaluation results further reveal a pronounced capability gap, with the best MLLM reaching only 52%, 87%, and 37% of human performance at the relation, action, and video levels, respectively. These findings underscore that complex hierarchical anticipation remains a significant challenge for MLLMs.
           </p>
         </div>
       </div>
@@ -351,164 +253,249 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Content blocks with image and text -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
+      <h2 class="title is-3" style="text-align: center;">
+        Overview of HiDBench
       </h2>
+      <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;font-size: 20px;">
+        
+      </p>
+      <figure class="image" style="margin-bottom: 1.5rem;">
+        <img src="static/images/fig_motivation.png" alt="fig_motivation" style="max-width: 100%; height: auto;">
+      </figure>
+      <h3 class="title is-4">
+        Aligned ego-exo centric views.
+      </h3>
+      <h3 class="title is-4">
+        Hierarchical future anticipation tasks.
+      </h3>
+      <ul style="margin-left: 1.5em; list-style-type: disc; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 20px;">
+          <strong style="color: #99CC00;">
+        </li>
+        <li style="font-size: 20px;">
+          <strong style="color: #4BACC6;">
+        </li>
+        <li style="font-size: 20px;">
+          <strong style="color: #C05046;">
+        </li>
+      </ul>
+      <!--
+      <h3 class="title is-4">
+        Ego-centirc
+      </h3>
+      <ul style="margin-left: 1.5em; list-style-type: disc; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 20px;">
+          <strong style="color: #F59D56;">Ego-centric views</strong> emphasize global visual relationship, while <strong style="color: #7B619C;">ego-centric views</strong> are dominated by hand-operated. This distribution shift brings new challenges to scene graph anticipation in ego-centric views.
+        </li>
+      </ul>
+      -->
+
+      <h2 class="title is-3" style="text-align: center;">
+        Benchmark Construction
+      </h2>
+      <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;font-size: 20px;">
+      </p>
+      <figure class="image" style="margin-bottom: 1.5rem;">
+        <img src="static/images/fig_benchmark.png" alt="fig_pipeline" style="max-width: 100%; height: auto;">
+      </figure>
+      <ul style="margin-left: 1.5em; list-style-type: disc; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 20px;">
+        </li>
+        <li style="font-size: 20px;">
+        </li>
+        <li style="font-size: 20px;">
+      </ul>
+      <!--
+      <h2 class="title is-3" style="text-align: center;">
+        Benchmark Statistic
+      </h2>
+      <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;font-size: 20px;">
+      </p>
+
+      <h3 class="title is-4">
+        Emotion Statistic
+      </h3>
+      <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;font-size: 20px;">
+        We annotated <strong style="color: #24a645;">333K</strong> frames in the <strong style="color: #f7a049;">FiT-AG</strong> and <strong style="color: #b8aeea;">FiT-PVSG</strong> datasets with <strong style="color: #24a645;">36</strong> emotion categories.
+      </p>
+      <figure class="image" style="margin-bottom: 1.5rem;">
+        <img src="static/images/fig_emotion_distribution.png" alt="fig_emotion" style="max-width: 100%; height: auto;">
+      </figure>
+      <!--
+      <ul style="margin-left: 1.5em; list-style-type: disc; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 20px;">
+          Neutral Emotions: A calm, emotionally stable state without strong positive or negative tendencies.
+        </li>
+        <li style="font-size: 20px;">
+          Positive Emotions: Reflects motivating positive experiences such as joy and fulfillment.
+        </li>
+        <li style="font-size: 20px;">
+          Concentration & Thinking: A focused allocation of cognitive resources toward a specific task or goal.
+        </li>
+        <li style="font-size: 20px;">
+          Surprise & Confusion: Transient emotions elicited by sudden stimuli, ranging from curiosity to alertness.
+        </li>
+        <li style="font-size: 20px;">
+          Negative Emotions: Encompasses sadness, anger, and other typically suppressed negative emotional states.
+        </li>
+        <li style="font-size: 20px;">
+          Physiological emotions: Refer to bodily states like fatigue or pain that arise from direct biological feedback.
+        <li style="font-size: 20px;">
+          Miscellaneous: Labeling uncertainty in mood determination due to incomplete information or ambiguity in expression.
+        </li>
+      </ul>
+      -->
+      <!--
+      <h3 class="title is-4">
+        State Statistic
+      </h3>
+      <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;font-size: 20px;">
+        We annotated <strong style="color: #24a645;">381K</strong> frames in the <strong style="color: #f7a049;">FiT-AG</strong> and <strong style="color: #b8aeea;">FiT-PVSG</strong> datasets with <strong style="color: #24a645;">164</strong> emotion categories.
+      </p>
+      <figure class="image" style="margin-bottom: 1.5rem;">
+        <img src="static/images/fig_state_distribution.png" alt="fig_state" style="max-width: 100%; height: auto;">
+      </figure>
+      <!--
+      <ul style="margin-left: 1.5em; list-style-type: disc; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 20px;">
+          Functional state: Describes the real-time operational mode of a system, device, or object.
+        </li>
+        <li style="font-size: 20px;">
+          Functional state： Describes the real-time operational mode of a system, device, or object.
+        </li>
+        <li style="font-size: 20px;">
+          Cleanliness & Maintenance: Assesses the hygiene and upkeep of a place or object.
+        </li>
+        <li style="font-size: 20px;">
+          Usage & Consumption: Refers to the states of items regarding their preparation, condition, or depletion.
+        </li>
+        <li style="font-size: 20px;">
+          Spatial State: Describes an object’s position, orientation, motion, and interaction within space.
+        </li>
+        <li style="font-size: 20px;">
+          Visual Property: Refers to the visual attributes of an object or scene, including material, color, surface condition, environment, and effects, used to accurately describe its appearance.
+        </li>
+        <li style="font-size: 20px;">
+          Dynamic State: Describes an object or system in a constantly changing, active state.
+        </li>
+        <li style="font-size: 20px;">
+          Biological & Environmental: Refer to an individual’s internal biological condition and external natural and social surroundings.
+        </li>
+        <li style="font-size: 20px;">
+          Uncertainty state: Refers to missing or incomplete information in the system, reflecting uncertainty about the current situation or data reliability.
+        </li>
+      </ul>
+      -->
+      <!--
+      <h3 class="title is-4">
+        Frame-level Captioon Statistic
+      </h3>
+      <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;font-size: 20px;">
+        We annotated <strong style="color: #24a645;">409K</strong> frames in the <strong style="color: #f7a049;">FiT-AG</strong> and <strong style="color: #b8aeea;">FiT-PVSG</strong> datasets, averaging one caption per <strong style="color: #24a645;">1.1</strong> frames.
+      </p>
+      <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;font-size: 20px;">
+        The length of caption characters in the <strong style="color: #f7a049;">FiT-AG</strong> and <strong style="color: #b8aeea;">FiT-PVSG</strong> datasets is concentrated in the <strong style="color: #f7a049;">70-80</strong> and <strong style="color: #b8aeea;">50-60</strong> range, respectively.
+      </p>
+      <figure class="image" style="margin-bottom: 1.5rem;">
+        <img src="static/images/fig_page_caption.png" alt="fig_state" style="max-width: 100%; height: auto;">
+      </figure>
+
+      <h2 class="title is-3" style="text-align: center;">
+        Method and Experimental
+      </h2>
+      <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;font-size: 20px;">
+        We propose a model-agnostic module named <strong style="color: #FFC000;">Text-Augmented Visual Semantic (TAVS)</strong> module that integrates fine-grained text cues—<strong style="color: #99CC00;">emotion</strong>, <strong style="color: #4BACC6;">state</strong>, and <strong style="color: #C05046;">frame-level caption</strong> encoded by CLIP—into baseline models to enhance reasoning about complex object interactions and narrative dynamics.
+      </p>
+      <figure class="image" style="margin: 0 auto 1rem auto; text-align: center; width: fit-content;">
+        <img src="static/images/fig_method_experiment.png" alt="fig_method_experiment" style="max-width: 100%; height: auto;">
+      </figure>
+      <h3 class="title is-4">
+        Standard Experimental Results Analysis
+      </h3>
+      <div class="highlight-box" >
+          <b>Takeaway I:</b> Different baselines incorporate TAVS modules with different boosts on the FiTbench.
+      </div>
+      <div class="highlight-box" >
+          <b>Takeaway II:</b> When observing a limited portion of the video, the improvement is notably higher, suggesting that fine-grained text cues offer strong priors for future reasoning.
+      </div>
+      <div class="highlight-box" >
+          <b>Takeaway III:</b> Processing datasets like FiT-PVSG, which feature more categories and complex scenarios, requires more detailed contextual clues.
+      </div>
+
+      <h3 class="title is-4">
+        Different F Values Experimental Results Analysis
+      </h3>
+      <div class="highlight-box" >
+          <b>Takeaway IV:</b> The higher initial clip rate of the input video providing more fine-grained text cues from known context, enabling TAVS to enhance the model's narrative reasoning capabilities by leveraging a greater number of text cues.
+      </div>
+      <div class="highlight-box" >
+          <b>Takeaway V:</b> The video durations in the FiT-PVSG dataset are generally longer. Consequently, even when the initial input video has the lowest clip rate, TAVS can still leverage various contextual drivers within the evolving video scenes to enable more accurate predictions.
+      </div>
+
+      <h2 class="title is-3" style="text-align: center;">
+        Case Study
+      </h2>
+      <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;font-size: 20px;">
+        Scene graph anticipation results of baseline(SceneSayerSDE) and baseline(SceneSayerSDE) with <strong style="color: #FFC000;">TAVS</strong> module on the proposed FiTBench. We report performance for both short-term and long-term future predictions.
+      </p>
+      <h3 class="title is-4">
+        Performance on FiT-AG
+      </h3>
+      <figure class="image" style="margin: 0 auto 1rem auto; text-align: center; width: fit-content;">
+        <img src="static/images/fig_visualize_ag.png" alt="fig_visualize" style="max-width: 100%; height: auto;">
+      </figure>
+      <div class="highlight-box" >
+          <b>Takeaway VI:</b> Adding the TAVS module enhances the baseline model's predictive performance for both short-term and long-term predictions. This demonstrates that fine-grained text cues help the model better understand the evolution of scenarios.
+      </div>
+
+      <h3 class="title is-4">
+        Performance on FiT-PVSG
+      </h3>
+      <figure class="image" style="margin: 0 auto 1rem auto; text-align: center; width: fit-content;">
+        <img src="static/images/fig_visualize_pvsg.png" alt="fig_visualize" style="max-width: 100%; height: auto;">
+      </figure>
+      <div class="highlight-box" >
+          <b>Takeaway VII:</b> Fine-grained text cues not only assist models in understanding scenario evolution for short-term and long-term future predictions, but also prompt models to focus on the subject-object pairs currently interacting within the scenario.
+      </div>
+
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <!--   
+  <section class="section">
+    
+    <h2 class="title is-3" style="text-align: center;">
+      Conclusion
+    </h2>
+    
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-justified">
+  
+            <div class="finding-box mb-4">
+              <span style="font-size: larger; text-align: center; font-weight: bold;">
+                We propose FiTBench, which introduces fine-grained contextual drivers to facilitate the understanding of relation evolution. In particular, each video sample is enhanced with three annotations of subject emotions, object states, and frame-level captions.
+              </span>
+            </div>
+            <div class="finding-box mb-4">
+              <span style="font-size: larger; text-align: center; font-weight: bold;">
+                We propose TAVS, a model-agnostic plug-and-play module for SGA. Experimental results show consistent improvements over six representative SGA models on FiTBench by integrating fine-grained text cues with TAVS.
+              </span>
+            </div>
+            
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+ 
 
 <!-- Statcounter tracking code -->
   
